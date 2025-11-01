@@ -1,0 +1,104 @@
+/* === ESTILO GERAL === */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #5dd2d2; /* azul claro do fundo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app-container {
+  background-color: #fff;
+  width: 360px;
+  border-radius: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90vh;
+}
+
+/* === TOPO === */
+header {
+  text-align: center;
+  padding: 20px;
+  color: #00a7a7;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8em;
+}
+
+header p {
+  margin: 5px 0 0;
+  font-size: 0.9em;
+  color: #007777;
+}
+
+/* === FORMULÁRIO === */
+.form-card {
+  flex: 1;
+  padding: 15px 20px;
+  overflow-y: auto;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.section h2 {
+  font-size: 0.9em;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.9em;
+}
+
+.btn-salvar {
+  background-color: #00c29a;
+  color: white;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-salvar:hover {
+  background-color: #009b7d;
+}
+
+/* === BARRA INFERIOR === */
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  background-color: #f4f4f4;
+  border-top: 1px solid #ddd;
+}
+
+.bottom-nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.8em;
+  text-align: center;
+}
