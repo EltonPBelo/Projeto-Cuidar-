@@ -1,0 +1,192 @@
+/* Reset e base */
+* { box-sizing: border-box; margin:0; padding:0; font-family: "Poppins", sans-serif; }
+:root{
+  --bg:#61c4c3;
+  --accent:#61c4c3;
+  --card:#ffffff;
+  --muted:#777;
+  --radius:22px;
+}
+
+/* Body centraliza o "app" em telas grandes */
+body{
+  background: var(--bg);
+  min-height:100vh;
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+  padding:24px 12px;
+}
+
+/* App shell: limita largura e adiciona sombra móvel */
+.app-shell{
+  width:100%;
+  max-width:420px;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:12px;
+  position:relative;
+}
+
+/* Status bar mock */
+.statusbar{
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  padding:8px 14px;
+  color:#0f1720;
+  font-size:0.9rem;
+  opacity:0.95;
+}
+
+/* Header com logo e título */
+.app-header{
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:6px 18px;
+}
+.logo{ display:flex; align-items:center; }
+.title{ color:#fff; font-size:1.35rem; font-weight:700; letter-spacing:0.3px; text-align:center; }
+
+/* Conteúdo principal */
+.content{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:14px;
+  padding-bottom:120px; /* espaço para o nav fixo */
+}
+
+/* Card base */
+.card{
+  width:92%;
+  background:var(--card);
+  border-radius:18px;
+  padding:18px;
+  box-shadow:0 12px 24px rgba(0,0,0,0.08);
+}
+
+/* Time card estilo grande */
+.time-card{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+}
+.time-card .subtitle{ color:#666; font-size:0.95rem; margin-bottom:2px; }
+.time-display{ display:flex; align-items:center; gap:12px; margin-top:6px; }
+.time-box{
+  background: #d9f4f3;
+  border-radius:12px;
+  width:86px;
+  height:64px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:2.2rem;
+  font-weight:700;
+  color:#0b3b3a;
+  box-shadow: inset 0 -4px 8px rgba(0,0,0,0.03);
+}
+.colon{ font-size:2.2rem; color:#0b3b3a; opacity:0.9; }
+
+/* Med list */
+.meds-card h3{ margin-bottom:8px; color:#333; }
+.med-list{ display:flex; flex-direction:column; gap:10px; }
+.med-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:8px 6px;
+  border-bottom:1px solid rgba(0,0,0,0.04);
+}
+.med-left{ display:flex; align-items:center; gap:12px; }
+.circle{
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  font-weight:700;
+  font-size:0.95rem;
+}
+.V{ background:#64b5f6; } .L{ background:#9575cd; } .I{ background:#4db6ac; } .G{ background:#f06292; }
+.med-item span{ color:#333; font-size:0.95rem; }
+
+/* Checkbox custom simples */
+.check {
+  width:20px;
+  height:20px;
+  accent-color:#fbc02d;
+}
+
+/* Cadastro inputs */
+#cadastro input[type="text"], #cadastro input[type="time"]{
+  width:100%;
+  padding:10px 12px;
+  margin:10px 0;
+  border-radius:10px;
+  border:1px solid #e0e0e0;
+  font-size:0.95rem;
+}
+#cadastro button{
+  background:var(--accent);
+  color:#fff;
+  padding:10px 14px;
+  border-radius:10px;
+  border:none;
+  width:100%;
+  font-weight:600;
+  cursor:pointer;
+}
+
+/* Bottom nav (rodapé) */
+.bottom-nav{
+  position:fixed;
+  left:50%;
+  transform:translateX(-50%);
+  bottom:22px;
+  width:92%;
+  max-width:420px;
+  height:72px;
+  background:#fff;
+  border-radius:40px;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  box-shadow:0 10px 28px rgba(0,0,0,0.16);
+  z-index:40;
+}
+.nav-btn{
+  background:none;
+  border:none;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  font-size:0.78rem;
+  color:#666;
+  gap:6px;
+  cursor:pointer;
+}
+.nav-btn.active{ color:var(--accent); font-weight:700; }
+.icon{ width:22px; height:22px; }
+
+/* screens */
+.screen{ display:none; width:100%; align-items:center; }
+.screen.active{ display:flex; flex-direction:column; align-items:center; }
+
+/* Responsividade */
+@media (max-width:360px){
+  .time-box{ width:70px; height:58px; font-size:1.8rem; }
+  .circle{ width:30px; height:30px; font-size:0.85rem; }
+}
