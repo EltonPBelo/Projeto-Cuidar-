@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script src="https://cdn.botpress.cloud/webchat/v3.3/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/11/04/22/20251104221114-K9AELRQ2.js" defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Cuidar+</title>
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#61c4c3">
+
+  <link rel="stylesheet" href="medicamentos.css">
+</head>
+<body>
+  <div class="app-shell">
+    <!-- status bar mock -->
+    <div class="statusbar">
+      <div class="time-left">15:00</div>
+      <div class="status-icons">◷ ☰</div>
+    </div>
+
+    <header class="app-header">
+      <div class="logo">
+        <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden><path fill="#FFDF6B" d="M12 21s-6.5-4.6-9-7.2C-1 8 3 4 6.5 4 9 4 12 7 12 7s3-3 5.5-3C21 4 25 8 21 13.8 18.5 16.4 12 21 12 21z"/></svg>
+      </div>
+      <div class="title">Cuidar+</div>
+    </header>
+
+    <main class="content">
+      <!-- Programação -->
+      <section id="programacao" class="screen active">
+        <div class="card time-card">
+          <div class="subtitle">Insulina &nbsp;&nbsp; <span class="dose">0,01 mL</span></div>
+          <div class="time-display">
+            <div class="time-box" id="hourBox">15</div>
+            <div class="colon">:</div>
+            <div class="time-box" id="minBox">00</div>
+          </div>
+        </div>
+
+        <div class="card meds-card">
+          <h3>Medicamentos:</h3>
+          <div id="medList" class="med-list">
+            <!-- itens preenchidos por JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Cadastro -->
+      <section id="cadastro" class="screen">
+        <div class="card">
+          <h3>Cadastrar medicamento</h3>
+          <p class="descricao">Adicione um novo medicamento à lista.</p>
+          <input type="text" id="nomeMed" placeholder="Nome do medicamento">
+          <input type="time" id="horaMed">
+          <button id="salvarBtn">Salvar</button>
+        </div>
+      </section>
+
+      <!-- Perfil -->
+      <section id="perfil" class="screen">
+        <div class="card">
+          <h3>Perfil do usuário</h3>
+          <p>Nome: Maria Silva</p>
+          <p>Idade: 67 anos</p>
+          <p>Condição: Diabetes Tipo 2</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Navegação fixa (rodapé) -->
+    <nav class="bottom-nav" role="navigation" aria-label="Navegação principal">
+      <button id="btnProg" class="nav-btn active" aria-label="Programação">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden><path d="M12 7v5l4 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Programação</span>
+      </button>
+
+      <button id="btnCad" class="nav-btn" aria-label="Cadastro">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Cadastro</span>
+      </button>
+
+      <button id="btnPerfil" class="nav-btn" aria-label="Perfil">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="7" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        <span>Perfil</span>
+      </button>
+    </nav>
+  </div>
+
+  <script src="medicamentos.js"></script>
+</body>
+</html>
